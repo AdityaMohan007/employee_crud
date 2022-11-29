@@ -46,7 +46,7 @@
                     <td>{{ $item->mobile }}</td>
                     <td>
                         <a href="{{ route('read', $item->id) }}"><button type="button" class="btn btn-info btn-sm">Read</button></a>
-                        <a href="{{ route('update', $item->id) }}"><button type="button" class="btn btn-primary btn-sm">Edit</button></a>
+                        <a href="{{ route('edit', $item->id) }}"><button type="button" class="btn btn-primary btn-sm">Edit</button></a>
                         <a href="{{ route('delete', $item->id) }}"><button type="button" class="btn btn-danger btn-sm">Delete</button></a>
 
                     </td>

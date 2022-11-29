@@ -10,10 +10,10 @@ class EmployeeController extends Controller
 
     public function create()
     {
-            // $a = Detail::all();
+        // $a = Detail::all();
         return view('Employee.create');
     }
-    public function create_post(Request $request)
+    public function store(Request $request)
     {
         $row = new Detail();
         $row->name = $request->name;
@@ -29,12 +29,12 @@ class EmployeeController extends Controller
         return view('Employee.read', compact('row'));
     }
 
-    public function update($id)
+    public function edit($id)
     {
         $row = Detail::find($id);
         return view('Employee.update', compact('row'));
     }
-    public function update_post(Request $request, $id)
+    public function update(Request $request, $id)
     {
         $row = Detail::find($id);
         $row->name = $request->name;
@@ -54,7 +54,8 @@ class EmployeeController extends Controller
 
 
     // list employees
-    public function list() {
+    public function list()
+    {
         $list = Detail::all();
         return view('Employee.list', compact('list'));
     }
